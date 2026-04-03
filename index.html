@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Mini App</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3, #7afcff);
+    font-family: Arial;
+}
+
+.container {
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 0 25px rgba(255,255,255,0.3);
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+input {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 10px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: white;
+    color: #ff4d6d;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #ffe0e9;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Welcome</h1>
+    <p>Enter your name:</p>
+    
+    <input type="text" id="name" placeholder="Your name">
+    <br>
+    <button onclick="showMessage()">Click Me</button>
+
+    <p id="output"></p>
+</div>
+
+<script>
+function showMessage() {
+    let name = document.getElementById("name").value;
+    document.getElementById("output").innerHTML = 
+        "Hello " + name + "  Welcome to my Mini App!";
+}
+</script>
+
+</body>
+</html>
